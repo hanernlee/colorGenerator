@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 
+  //converts Hex Code to RGB Color No.
   var hexToRGB = function(hexCode) {
     var hexColor = hexCode.replace('#','');
     var R = parseInt(hexColor.slice(0,2),16);
@@ -8,6 +9,8 @@ $( document ).ready(function() {
     return {R, G, B};
   }
 
+  //converts RGB back to Hex Code
+  //if hex Code is only one Digit add '0' to it or colors will not generate properly
   var rgbToHex = function(startVal,diff,steps,index) {
     var hexCode = startVal + (diff * (index/steps));
     var finalHexColor = Math.round(hexCode).toString(16);
@@ -27,10 +30,12 @@ $( document ).ready(function() {
     var firstRGB = hexToRGB(firstColor);
     var secondRGB = hexToRGB(secondColor);
 
+    //difference between RGB of both colors
     var rDiff = secondRGB.R - firstRGB.R;
     var gDiff = secondRGB.G - firstRGB.G;
     var bDiff = secondRGB.B - firstRGB.B;
 
+    //creating the Colors and storing in an array
     var generateSteps = function() {
       var newHexColor = {};
       for (var i = 0; i <= steps; i ++) {
@@ -43,6 +48,7 @@ $( document ).ready(function() {
     }
     generateSteps();
 
+    //looping through the array to generate DIV element with bgColor and append to HTML
     var generatePalette = function() {
       for (var i = 0; i < hexColorArray.length; i++) {
         var $paletteDiv = $('<div>').css({
@@ -56,6 +62,7 @@ $( document ).ready(function() {
     generatePalette();
   });
 
+  //clear palette
   $('#clearBtn').on('click',function() {
     $('.paletteContainer').empty();
   });
