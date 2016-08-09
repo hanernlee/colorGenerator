@@ -64,16 +64,16 @@ button {
     padding:20px;
     width:350px;
   }
+}
 
 @media (max-width: 380px) {
   .results {
     width:300px;
   }
+}
 
 @media (max-width: 330px) {
   .results {
     width:250px;
   }
-}
-
 }
