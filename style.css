@@ -4,28 +4,33 @@ body {
   padding:0;
 }
 
+nav {
+  background-color: cornflowerblue;
+  padding:40px 0;
+  width:100%;
+}
+
 h1 {
   margin:0;
-  padding:60px;
   text-align:center;
-  background-color: cornflowerblue;
   color:white;
   font-family: 'Press Start 2P', cursive;
 }
 
 input {
-  margin-bottom:0;
+  margin:0 10px 0 10px;
 }
 
 input[type=text] {
     padding: 12px 20px;
-    margin: 20px 20px 0 0;
+    margin-top: 20px;
     box-sizing: border-box;
     font-size:16px;
 }
 
 button {
-  margin:10px 20px 0 0;
+  text-align:center;
+  margin:10px 10px;
   background-color:cornflowerblue;
   color:white;
   height:50px;
@@ -38,20 +43,37 @@ button {
 
 .inputContainer {
   text-align:center;
+  margin: 0 auto;
 }
 
 .results {
-  margin: 25px auto 50px auto;
-  width:800px;
+  margin: 10px auto 50px auto;
+  width:700px;
   border:3px dashed black;
   overflow:hidden;
-}
-
-.palleteContainer {
 }
 
 .paletteBox {
   height:50px;
   width:50px;
   float:left;
+}
+
+@media (max-width: 600px) {
+  .results {
+    padding:20px;
+    width:350px;
+  }
+
+@media (max-width: 380px) {
+  .results {
+    width:300px;
+  }
+
+@media (max-width: 330px) {
+  .results {
+    width:250px;
+  }
+}
+
 }
