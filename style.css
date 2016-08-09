@@ -1,0 +1,57 @@
+body {
+  background-color:darkslateblue;
+  margin:0;
+  padding:0;
+}
+
+h1 {
+  margin:0;
+  padding:60px;
+  text-align:center;
+  background-color: cornflowerblue;
+  color:white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+input {
+  margin-bottom:0;
+}
+
+input[type=text] {
+    padding: 12px 20px;
+    margin: 20px 20px 0 0;
+    box-sizing: border-box;
+    font-size:16px;
+}
+
+button {
+  margin:10px 20px 0 0;
+  background-color:cornflowerblue;
+  color:white;
+  height:50px;
+  width:200px;
+  font-size:20px;
+  font-family: 'Press Start 2P', cursive;
+  border: 3px solid white;
+  display:inline-block;
+}
+
+.inputContainer {
+  text-align:center;
+}
+
+.results {
+  margin: 25px auto 50px auto;
+  width:800px;
+  border:3px dashed black;
+  overflow:hidden;
+}
+
+.palleteContainer {
+}
+
+.paletteBox {
+  height:50px;
+  width:50px;
+  float:left;
+}
