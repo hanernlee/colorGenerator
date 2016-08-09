@@ -10,10 +10,10 @@ $( document ).ready(function() {
   }
 
   //converts RGB back to Hex Code
-  //if hex Code is only one Digit add '0' to it or colors will not generate properly
   var rgbToHex = function(startVal,diff,steps,index) {
     var hexCode = startVal + (diff * (index/steps));
     var finalHexColor = Math.round(hexCode).toString(16);
+    //if it is a single hex code, add '0' to it or colors will not generate properly
     if (finalHexColor.length === 1) {
       finalHexColor = '0' + finalHexColor;
     }
