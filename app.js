@@ -7,7 +7,7 @@ $( document ).ready(function() {
     var G = parseInt(hexColor.slice(2,4),16);
     var B = parseInt(hexColor.slice(4,6),16);
     return {R, G, B};
-  }
+  };
 
   //converts RGB back to Hex Code
   var rgbToHex = function(startVal,diff,steps,index) {
@@ -18,7 +18,7 @@ $( document ).ready(function() {
       finalHexColor = '0' + finalHexColor;
     }
     return finalHexColor;
-  }
+  };
 
   $('#generateBtn').on('click', function() {
     $('.paletteContainer').empty();
@@ -45,9 +45,8 @@ $( document ).ready(function() {
         var newHexColor = newR+''+newG+''+newB;
         hexColorArray.push(newHexColor);
       };
-    }
+    };
     generateSteps();
-    console.log(hexColorArray);
 
     //looping through the array to generate DIV element with bgColor and append to HTML
     var generatePalette = function() {
@@ -59,12 +58,15 @@ $( document ).ready(function() {
         $paletteDiv.addClass('paletteBox');
         $('.paletteContainer').append($paletteDiv);
       }
-    }
+    };
     generatePalette();
   });
 
-  //clear palette
+  //clear palette container and all input fields
   $('#clearBtn').on('click',function() {
     $('.paletteContainer').empty();
+    $('input').each(function() {
+      $(this).val('');
+    });
   });
 });
