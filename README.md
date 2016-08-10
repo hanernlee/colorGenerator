@@ -2,4 +2,6 @@
 
 The app generates a gradient color based on two hex color codes
 
-*README TO BE UPDATED FURTHER* 
+#### [Color Generator App] (http://hanernlee.github.io/colorGenerator)
+
+*README TO BE UPDATED FURTHER*
