@@ -13,7 +13,7 @@ $( document ).ready(function() {
   var rgbToHex = function(startVal,diff,steps,index) {
     var hexCode = startVal + (diff * (index/steps));
     var finalHexColor = Math.round(hexCode).toString(16);
-    //if it is a single hex code, add '0' to it or colors will not generate properly
+    //if it is a single hex code, add '0' to it so colors will generate correctly
     if (finalHexColor.length === 1) {
       finalHexColor = '0' + finalHexColor;
     }
@@ -24,6 +24,7 @@ $( document ).ready(function() {
     $('.paletteContainer').empty();
     var firstColor = $('#colorOne').val();
     var secondColor= $('#colorTwo').val();
+    //reducing steps by 1 to exclude the first step
     var steps = parseInt($('#numSteps').val())-1;
     var hexColorArray = [];
 
@@ -37,16 +38,16 @@ $( document ).ready(function() {
 
     //creating the Colors and storing in an array
     var generateSteps = function() {
-      var newHexColor = {};
       for (var i = 0; i <= steps; i ++) {
         var newR = rgbToHex(firstRGB.R,rDiff,steps,i);
         var newG = rgbToHex(firstRGB.G,gDiff,steps,i);
         var newB = rgbToHex(firstRGB.B,bDiff,steps,i);
-        newHexColor = newR+''+newG+''+newB;
+        var newHexColor = newR+''+newG+''+newB;
         hexColorArray.push(newHexColor);
       };
     }
     generateSteps();
+    console.log(hexColorArray);
 
     //looping through the array to generate DIV element with bgColor and append to HTML
     var generatePalette = function() {
