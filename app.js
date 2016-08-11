@@ -13,7 +13,7 @@ $( document ).ready(function() {
   var rgbToHex = function(startVal,diff,steps,index) {
     var hexCode = startVal + (diff * (index/steps));
     var finalHexColor = Math.round(hexCode).toString(16);
-    //if it is a single hex code, add '0' to it so colors will generate correctly
+    //if it is a single hex code, add padding of '0' to it so colors will generate correctly
     if (finalHexColor.length === 1) {
       finalHexColor = '0' + finalHexColor;
     }
@@ -36,7 +36,7 @@ $( document ).ready(function() {
     var gDiff = secondRGB.G - firstRGB.G;
     var bDiff = secondRGB.B - firstRGB.B;
 
-    //creating the Colors and storing in an array
+    //loop through to generate each color pallete and storing in an array
     var generateSteps = function() {
       for (var i = 0; i <= steps; i ++) {
         var newR = rgbToHex(firstRGB.R,rDiff,steps,i);
@@ -52,7 +52,7 @@ $( document ).ready(function() {
     var generatePalette = function() {
       for (var i = 0; i < hexColorArray.length; i++) {
         var $paletteDiv = $('<div>').css({
-          backgroundColor: "#"+hexColorArray[i],
+          backgroundColor: '#'+hexColorArray[i],
         });
 
         $paletteDiv.addClass('paletteBox');
