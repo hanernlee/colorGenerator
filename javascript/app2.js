@@ -80,7 +80,6 @@ $( document ).ready(function() {
   var rgbToHex = function(startVal,diff,steps,index) {
     var rgbHex = startVal + (diff * (index/steps));
     var finalHex = decodeHex(Math.round(rgbHex));
-    console.log(finalHex);
     if (finalHex.length == 1) {
       finalHex = '0' + finalHex;
     } else if (finalHex === '') {
