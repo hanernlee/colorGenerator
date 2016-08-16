@@ -1,3 +1,4 @@
+//better and refactorised solution
 $( document ).ready(function() {
 
   //converts Hex Code to RGB Color in an Array

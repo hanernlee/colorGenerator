@@ -1,4 +1,4 @@
-// second solution without parseInt and toString methods
+// second solution without parseInt and toString methods still needs refactoring
 $( document ).ready(function() {
 //Hex Code Library
   var hexLibrary = {
